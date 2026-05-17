@@ -1418,7 +1418,7 @@ plt.tight_layout()
 plt.show()
 
 ```
-<img width="586" height="652" alt="image" src="https://github.com/user-attachments/assets/67adae60-a333-4c3e-a040-ee22d42efce0" />
+<img width="586" height="652" alt="image" src="Images/f12.png" />
 
 
 Thanks for your attention
