@@ -1251,7 +1251,7 @@ print("="*60 + "\n")
 
 
 ```
-<img width="3000" height="1800" alt="lifa_twine_variance" src="Images/f13.png" />
+<img width="1000" height="600" alt="lifa_twine_variance" src="Images/f13.png" />
 
 
 # 2.3) Missed Fault on SIFA (noisy condition) 
