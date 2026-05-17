@@ -652,9 +652,9 @@ def _encrypt_f(P, RK, block_index):
         input_sbox = X_16[36][2 * j] ^ RK_32[36][j]
         output_sbox = _S(input_sbox)
         
-        if j == 6:  # S-box شماره 6
-            fault = output_sbox  # ذخیره خروجی S-box 6
-        if j == 7:  # S-box شماره 7
+        if j == 6:  # S-box  6
+            fault = output_sbox  # saving output of S-box 6
+        if j == 7:  # S-box  7
             output_sbox = fault
 
 
@@ -690,7 +690,7 @@ def display_nibbles(ciphertext_hex: str):
 
     ciphertext_bin = format(ciphertext_int, '064b')
 
-    print("نمایش نیبل‌ها (شماره‌گذاری از راست به چپ):\n")
+    print("Nibbles preview :\n")
     for i in range(16):
         start = 64 - (i + 1) * 4
         end = 64 - i * 4
@@ -807,7 +807,7 @@ def xor(a, b):
 	return ans
 
 def binary_to_hex(binary_string):
-    hex_value = hex(int(binary_string, 2))  # حذف پیشوند "0x"
+    hex_value = hex(int(binary_string, 2)) 
     return hex_value.upper()
     
 a = hex_to_binary(Eff[5])
@@ -1281,9 +1281,9 @@ def xor(bin1, bin2):
 def binary_to_hex(binary_string):
     return hex(int(binary_string, 2))[2:]
 
-# _S: تابع اس‌باکس
-# InEff_sifa: لیست داده‌های غیرموثر صحیح
-# Eff_sifa: لیست داده‌های موثر (برای تزریق نویز)
+# _S: sbox function
+# InEff_sifa: correct ineffective
+# Eff_sifa: correct effective
 
 # ==========================================
 CORRECT_KEY = "00110010"
@@ -1371,10 +1371,10 @@ for noise_rate in noise_rates:
 
             sorted_sei = sorted(keysaver_sifa.items(), key=lambda x: x[1], reverse=True)
             
-            correct_rank = 256 # مقدار پیش‌فرض (بدترین حالت)
+            correct_rank = 256 
             for rank_idx, (k, sei_val) in enumerate(sorted_sei):
                 if k == CORRECT_KEY:
-                    correct_rank = rank_idx + 1 # رتبه‌ها از 1 شروع می‌شوند
+                    correct_rank = rank_idx + 1 
                     break
                     
             ranks_for_this_point.append(correct_rank)
@@ -1422,5 +1422,3 @@ plt.show()
 
 
 Thanks for your attention
-vahid soleimani
-vahidsoleimani.tc@gmail.com
